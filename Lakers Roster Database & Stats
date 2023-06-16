@@ -1,0 +1,26 @@
+-- create a lakers database
+
+CREATE TABLE jersey_store (id INTEGER PRIMARY KEY, team TEXT, player TEXT, jersey_number INTEGER, price INTEGER);
+
+INSERT INTO jersey_store VALUES (1, "lakers", "lebron", 23, 109.99);
+INSERT INTO jersey_store VALUES (2, "lakers", "reaves", 15, 109.99);
+INSERT INTO jersey_store VALUES (4, "lakers", "russell", 1, 109.99);
+INSERT INTO jersey_store VALUES (3, "lakers", "davis", 3, 109.99);
+INSERT INTO jersey_store VALUES (5, "lakers", "vanderbilt", 2, 119.99);
+INSERT INTO jersey_store VALUES (6, "lakers", "hachimura", 28, 109.99);
+INSERT INTO jersey_store VALUES (7, "lakers", "walker", 4, 99.99);
+INSERT INTO jersey_store VALUES (8, "lakers", "schroder", 17, 109.99);
+INSERT INTO jersey_store VALUES (9, "lakers", "brown", 7, 109.99);
+INSERT INTO jersey_store VALUES (10, "lakers", "beasley", 5, 99.99);
+INSERT INTO jersey_store VALUES (11, "lakers", "gabriel", 35, 109.99);
+INSERT INTO jersey_store VALUES (12, "lakers", "bamba", 12, 109.99);
+INSERT INTO jersey_store VALUES (13, "lakers", "thompson", 9, 109.9);
+INSERT INTO jersey_store VALUES (14, "lakers", "pippen", 14, 109.99);
+INSERT INTO jersey_store VALUES (15, "lakers", "christie", 10, 109.99);
+
+-- display the order of jersey numbers from lowest to highest
+SELECT * FROM jersey_store
+ORDER BY jersey_number asc;
+
+-- what is the total price to purchase all of the jerseys for the diehard fans?
+SELECT SUM(price) FROM jersey_store;
