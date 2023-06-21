@@ -1,0 +1,58 @@
+-- Database of the Smith Family
+CREATE TABLE famous_people (id INTEGER PRIMARY KEY, full_name TEXT, age INTEGER);
+
+INSERT INTO famous_people (full_name, age)
+    VALUES ('Will Smith', '54');
+INSERT INTO famous_people (full_name, age)
+    VALUES ('Jada Pinkett Smith', '51');
+INSERT INTO famous_people (full_name, age)
+    VALUES ('Willow Smith', '22');
+INSERT INTO famous_people (full_name, age)
+    VALUES ('Trey Smith', '30');
+INSERT INTO famous_people (full_name, age)
+    VALUES ('Jaden Smith', '24');
+
+-- Displays tere profession and how long they have been doing it
+CREATE TABLE profession (id INTEGER PRIMARY KEY, name TEXT, career_length INTEGER);
+
+INSERT INTO profession (name, career_length)
+    VALUES ('actor', '33 years');
+ INSERT INTO profession (name, career_length)
+    VALUES ('actress', '24 years');
+INSERT INTO profession (name, career_length)
+    VALUES ('actress', '14 years');
+INSERT INTO profession (name, career_length)
+    VALUES ('actor', '8 years');
+    INSERT INTO profession (name, career_length)
+    VALUES ('actor', '10 years');
+
+-- Family Connections
+CREATE TABLE family_tree (id INTEGER PRIMARY KEY, connection TEXT);
+
+INSERT INTO family_tree (connection)
+    VALUES ('Married');
+INSERT INTO family_tree (connection)
+    VALUES ('Relatives');
+INSERT INTO family_tree (connection)
+    VALUES ('Cousins');
+INSERT INTO family_tree (connection)
+    VALUES ('Friends');
+    
+ -- To show each table for simplification reasons  
+SELECT * FROM famous_people;
+
+SELECT * FROM profession;
+
+SELECT * FROM family_tree;
+
+-- Showcases the average career length in the Smith family
+SELECT famous_people.full_name, AVG(p.career_length) AS AverageCareerLength FROM famous_people
+JOIN profession p
+ON famous_people.id = p.id;
+
+-- Show cases the connection between each person in the Smith family
+SELECT a.full_name, b.full_name, family_tree.connection FROM family_tree 
+JOIN famous_people a
+ON family_tree.id = a.id
+JOIN famous people b
+ON family_tree.id = b.id;
