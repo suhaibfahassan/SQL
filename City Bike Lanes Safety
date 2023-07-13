@@ -68,7 +68,7 @@ INSERT INTO BIT_DB.CityBikeLanes values(58,2011, 2021, "Beaver", 3.5, 2.5, "no")
 INSERT INTO BIT_DB.CityBikeLanes values(59,2008, 2021,"Kensington",4,4.9,"yes");
 INSERT INTO BIT_DB.CityBikeLanes values(60,2002, 2021,"Mouse",4.5,4.3,"no");
 
--- This helps get a look at the data and figure out what kind of questions I wanted to answer
+-- Getting a better visual of the data
 SELECT * FROM BIT_DB.CityBikeLanes LIMIT 10;
 
 -- Displays the average safety rating of every street's bike lanes
