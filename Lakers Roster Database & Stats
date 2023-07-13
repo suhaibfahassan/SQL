@@ -1,4 +1,4 @@
--- create a lakers database
+-- Create a database for the Los Angeles Lakers
 
 CREATE TABLE jersey_store (id INTEGER PRIMARY KEY, team TEXT, player TEXT, jersey_number INTEGER, price INTEGER);
 
@@ -18,9 +18,9 @@ INSERT INTO jersey_store VALUES (13, "lakers", "thompson", 9, 109.9);
 INSERT INTO jersey_store VALUES (14, "lakers", "pippen", 14, 109.99);
 INSERT INTO jersey_store VALUES (15, "lakers", "christie", 10, 109.99);
 
--- display the order of jersey numbers from lowest to highest
+-- Display the order of jersey numbers from lowest to highest
 SELECT * FROM jersey_store
 ORDER BY jersey_number asc;
 
--- what is the total price to purchase all of the jerseys for the diehard fans?
+-- What is the total price to purchase all of the jerseys for the diehard fans?
 SELECT SUM(price) FROM jersey_store;
