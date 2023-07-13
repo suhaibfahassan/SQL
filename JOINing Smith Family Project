@@ -12,7 +12,7 @@ INSERT INTO famous_people (full_name, age)
 INSERT INTO famous_people (full_name, age)
     VALUES ('Jaden Smith', '24');
 
--- Displays tere profession and how long they have been doing it
+-- Displays their profession and how long they have been doing it
 CREATE TABLE profession (id INTEGER PRIMARY KEY, name TEXT, career_length INTEGER);
 
 INSERT INTO profession (name, career_length)
@@ -37,20 +37,13 @@ INSERT INTO family_tree (connection)
     VALUES ('Cousins');
 INSERT INTO family_tree (connection)
     VALUES ('Friends');
-    
- -- To show each table for simplification reasons  
-SELECT * FROM famous_people;
-
-SELECT * FROM profession;
-
-SELECT * FROM family_tree;
 
 -- Showcases the average career length in the Smith family
 SELECT famous_people.full_name, AVG(p.career_length) AS AverageCareerLength FROM famous_people
 JOIN profession p
 ON famous_people.id = p.id;
 
--- Show cases the connection between each person in the Smith family
+-- Showcases the connection between each person in the Smith family
 SELECT a.full_name, b.full_name, family_tree.connection FROM family_tree 
 JOIN famous_people a
 ON family_tree.id = a.id
