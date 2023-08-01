@@ -1,3 +1,5 @@
+Data Source: https://docs.yugabyte.com/preview/sample-data/chinook/
+
 --Customers not in the USA
 SELECT FirstName, LastName, CustomerId, Country
 FROM customers
