@@ -1371,7 +1371,7 @@ SELECT Conference, Real_value AS Player_Value FROM players GROUP BY Conference H
 -- Creates a database of how experienced a player is depending on their years of playing in the NBA
 SELECT Player, Seasons_in_league,
 CASE
-    WHEN Seasons_in_league > 15 THEN "Old Timer"
+    WHEN Seasons_in_league > 14 THEN "Old Timer"
     WHEN Seasons_in_league > 10 THEN "Veteran"
     WHEN Seasons_in_league > 5 THEN "Seasoned Player"
     WHEN Seasons_in_league > 3 THEN "Growing Player"
