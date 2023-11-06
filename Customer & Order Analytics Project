@@ -1,6 +1,7 @@
 Data Source: Kaggle
 
 #In this SQL, I'm querying a database with multiple tables in it to quantify statistics about customer and order data. 
+#This project showcases my ability with multiple-tabled JOINS, aggregates, and filtering data.
 
 #1. How many orders were placed in January? 
 SELECT COUNT(orderid)
